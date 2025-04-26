@@ -1,0 +1,28 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    view detail user id = <%= user.id %>
+        <form action="/update-user/<%= user.id %>" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="fullName" value="<%=user.fullName %>" required>
+            <br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="<%=user.email %>" required>
+            <br><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" value="<%=user.address %>" required>
+            <br><br>
+
+            <button type="submit">Update</button>
+        </form>
+</body>
+
+</html>
